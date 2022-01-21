@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body onload="javascript:startApp();">
+
+<script>
+	var appurl = 'sbiyono://';
+	var appstore = 'https://sbiyono.sbi/app';
+	
+	var timeout;
+	function preventPopup() {
+		clearTimeout(timeout);
+		timeout = null;
+		window.removeEventListener('pagehide', preventPopup);
+	}
+	
+	function startApp() {
+		window.location = appurl;
+		timeout = setTimeout(function() {
+			//if(confirm('You do not seem to have the App installed, do you want to go download it now?')) {
+				if(navigator.userAgent.indexOf('Android')>0) {
+					window.location="https://goo.gl/ccfchV";
+				} else if(navigator.userAgent.indexOf('iPhone')>0) {
+					window.location="https://goo.gl/X6WDiX";
+				} else {
+					document.location = appstore;
+				}
+			//}
+		}, 1000);
+		window.addEventListener('pagehide', preventPopup);
+	}
+</script>
+
+<h1>Test Page</h1>
+
+</body>
+</html>
