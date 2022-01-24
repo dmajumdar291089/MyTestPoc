@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body onload="javascript:startApp();">
+
+<script>
+	var appstore = 'https://sbiyono.sbi/app';
+	
+	function startApp() {
+    if(navigator.userAgent.indexOf('Android')>0) {
+				window.location="https://goo.gl/ccfchV";
+			} else if(navigator.userAgent.indexOf('iPhone')>0) {
+				window.location="https://goo.gl/X6WDiX";
+			} else {
+				document.location = appstore;
+			}
+	}
+</script>
+
+<h1>Test Page 2</h1>
+
+</body>
+</html>
