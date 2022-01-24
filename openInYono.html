@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<body onload="javascript:startApp();">
+<body onload="javascript:loadAppStore();">
 
 <script>
 	var appstore = 'https://sbiyono.sbi/app';
 	
-	function startApp() {
-    if(navigator.userAgent.indexOf('Android')>0) {
-				window.location="https://goo.gl/ccfchV";
-			} else if(navigator.userAgent.indexOf('iPhone')>0) {
-				window.location="https://goo.gl/X6WDiX";
-			} else {
-				document.location = appstore;
-			}
+	function loadAppStore() {
+    		if(navigator.userAgent.indexOf('Android')>0) {
+			window.location="https://goo.gl/ccfchV";
+		} else if(navigator.userAgent.indexOf('iPhone')>0) {
+			window.location="https://goo.gl/X6WDiX";
+		} else {
+			document.location = appstore;
+		}
 	}
 </script>
 
